@@ -1,12 +1,14 @@
+import { Link } from 'react-router'
+
 export default function Logo() {
   return (
-    <a href="#home" className="logo" aria-label="Emmy.js home">
+    <Link to="/" className="logo" aria-label="Emmy.dev home">
       <span className="logo__mark" aria-hidden="true">
         {'</>'}
       </span>
       <span>
-        Emmy<span className="logo__ext">.js</span>
+        Emmy<span className="logo__ext">.dev</span>
       </span>
-    </a>
+    </Link>
   )
 }

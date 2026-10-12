@@ -1,4 +1,4 @@
-import { PROFILE, SKILLS } from '../data/profile'
+import { PROFILE } from '../data/profile'
 
 type BandProps = {
   items: string[]
@@ -30,7 +30,20 @@ function Band({ items, variant, reverse }: BandProps) {
 }
 
 export default function Marquee() {
-  const skills = [...SKILLS.frontend, ...SKILLS.backend, 'Git', 'MySQL', 'REST APIs']
+  const skills = [
+    'React',
+    'TypeScript',
+    'Node.js',
+    'Express',
+    'MongoDB',
+    'TanStack Query',
+    'Tailwind CSS',
+    'Python',
+    'REST APIs',
+    'JWT & OAuth',
+    'Vitest',
+    'MySQL',
+  ]
   const cta = ['Send A DM']
 
   return (

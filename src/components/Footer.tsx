@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import Logo from './Logo'
 import { NAV_LINKS } from './navLinks'
 import { PROFILE } from '../data/profile'
@@ -14,9 +15,9 @@ export default function Footer() {
       <div className="footer__bottom">
         <nav className="footer__nav" aria-label="Footer">
           {NAV_LINKS.map((link) => (
-            <a key={link.label} href={link.href}>
+            <Link key={link.label} to={link.href}>
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
         <nav className="footer__nav" aria-label="Social">

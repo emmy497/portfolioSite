@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router'
 import Logo from './Logo'
 import { NAV_LINKS } from './navLinks'
 import { PROFILE } from '../data/profile'
@@ -13,9 +14,9 @@ export default function Header() {
       <div className="header__menu">
         <nav className="header__nav" aria-label="Primary">
           {NAV_LINKS.map((link) => (
-            <a key={link.label} href={link.href} onClick={() => setOpen(false)}>
+            <Link key={link.label} to={link.href} onClick={() => setOpen(false)}>
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 

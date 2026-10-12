@@ -1,16 +1,7 @@
-import type { CSSProperties, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import Header from './Header'
+import HeroBackground from './HeroBackground'
 import { PROFILE } from '../data/profile'
-
-// Grid cells (column, row) that get a soft white highlight, matching the design.
-const HIGHLIGHT_CELLS: [number, number][] = [
-  [5, 1], [6, 1], [8, 1], [9, 1],
-  [3, 2], [6, 2], [8, 2],
-  [10, 3],
-  [2, 5], [5, 5], [6, 5], [7, 5], [9, 5],
-  [3, 6], [5, 6], [9, 6],
-  [1, 7], [3, 7], [7, 7], [8, 7], [12, 7],
-]
 
 const k = (s: string) => <span className="tok-k">{s}</span>
 const v = (s: string) => <span className="tok-v">{s}</span>
@@ -19,14 +10,19 @@ const s = (str: string) => <span className="tok-s">'{str}'</span>
 const c = (str: string) => <span className="tok-c">{str}</span>
 
 const CODE_LINES: ReactNode[] = [
-  c('// hello, world 👋'),
+  c('// hello, world'),
   <>{k('const')} {v('emmanuel')} = {'{'}</>,
-  <>  {p('role')}: {s('Software Engineer')},</>,
-  <>  {p('stack')}: [{s('React')}, {s('TypeScript')},</>,
-  <>          {s('Node.js')}, {s('Python')}],</>,
-  <>  {p('education')}: {s('B.Sc. CS, UNILAG')},</>,
-  <>  {p('now')}: {s('Full-Stack Dev @ TechStudio')},</>,
-  <>  {p('loves')}: [{s('clean UI')}, {s('teaching')}],</>,
+  <>  {p('role')}: {s('Full-Stack Engineer')},</>,
+  <>  {p('frontend')}: [{s('React')}, {s('TypeScript')},</>,
+  <>    {s('TanStack Query')}, {s('Tailwind')}],</>,
+  <>  {p('backend')}: [{s('Node.js')}, {s('Express')},</>,
+  <>    {s('Python')}, {s('REST APIs')}],</>,
+  <>  {p('database')}: [{s('MongoDB')}, {s('MySQL')}],</>,
+  <>  {p('auth')}: [{s('JWT')}, {s('OAuth 2.0')}, {s('OTP')}],</>,
+  <>  {p('testing')}: [{s('Vitest')}, {s('Supertest')}],</>,
+  <>  {p('cloud')}: [{s('Vercel')}, {s('Render')},</>,
+  <>    {s('Cloudinary')}],</>,
+  <>  {p('education')}: {s('B.Sc. (Hons) CS, UNILAG')},</>,
   <>{'}'}</>,
   '',
   <>{k('export default')} {v('emmanuel')}</>,
@@ -35,17 +31,7 @@ const CODE_LINES: ReactNode[] = [
 export default function Hero() {
   return (
     <section className="hero" id="home">
-      <div className="hero__bg" aria-hidden="true">
-        <div className="hero__blobs" />
-        {HIGHLIGHT_CELLS.map(([col, row]) => (
-          <span
-            key={`${col}-${row}`}
-            className="hero__cell"
-            style={{ '--col': col, '--row': row } as CSSProperties}
-          />
-        ))}
-        <div className="hero__grid" />
-      </div>
+      <HeroBackground />
 
       <Header />
 
@@ -89,7 +75,7 @@ export default function Hero() {
             </pre>
             <div className="editor__status" aria-hidden="true">
               <span>● TypeScript</span>
-              <span>main ✓</span>
+              <span>main</span>
             </div>
           </div>
         </div>

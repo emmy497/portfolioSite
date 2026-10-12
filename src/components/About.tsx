@@ -3,7 +3,8 @@ import { PROFILE, SKILLS } from '../data/profile'
 const STACK_GROUPS = [
   { label: 'frontend', items: SKILLS.frontend },
   { label: 'backend', items: SKILLS.backend },
-  { label: 'tools', items: SKILLS.tools },
+  { label: 'database', items: SKILLS.database },
+  { label: 'testing & devops', items: SKILLS.devops },
 ]
 
 export default function About() {
