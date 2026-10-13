@@ -5,7 +5,7 @@ import { PROFILE } from '../data/profile'
 
 export default function Footer() {
   return (
-    <footer className="footer container">
+    <footer className="footer container" id="contact">
       <div className="footer__top">
         <Logo />
         <p className="footer__copy">
