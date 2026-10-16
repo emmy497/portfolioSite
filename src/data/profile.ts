@@ -14,7 +14,7 @@ export const PROFILE = {
 }
 
 export const SKILLS = {
-  frontend: ['React', 'TypeScript', 'JavaScript', 'TanStack Query', 'Redux', 'React Router', 'Tailwind CSS', 'HTML5', 'CSS3'],
+  frontend: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'TanStack Query', 'Redux', 'React Router', 'Tailwind CSS', 'HTML5', 'CSS3'],
   backend: ['Node.js', 'Express', 'Python', 'Django', 'Flask', 'REST APIs', 'JWT', 'OAuth 2.0', 'Zod'],
   database: ['MongoDB', 'Mongoose', 'MySQL', 'Geospatial queries', 'Indexing'],
   devops: ['Vitest', 'Supertest', 'Git', 'GitHub', 'Vercel', 'Render', 'Cloudinary', 'Agile'],

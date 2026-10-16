@@ -13,7 +13,7 @@ const CODE_LINES: ReactNode[] = [
   c('// hello, world'),
   <>{k('const')} {v('emmanuel')} = {'{'}</>,
   <>  {p('role')}: {s('Full-Stack Engineer')},</>,
-  <>  {p('frontend')}: [{s('React')}, {s('TypeScript')},</>,
+  <>  {p('frontend')}: [{s('React')}, {s('Next.js')}, {s('TypeScript')},</>,
   <>    {s('TanStack Query')}, {s('Tailwind')}],</>,
   <>  {p('backend')}: [{s('Node.js')}, {s('Express')},</>,
   <>    {s('Python')}, {s('REST APIs')}],</>,
